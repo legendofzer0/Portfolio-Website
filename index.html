@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  Jenish Maharjan Portfolio </title>
+    <title>Jenish Maharjan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <b>
-        Portfolio Website of Jenish Maharjan. <br/>
-        </b>
-        <p>Web Developer | AI/ML Enthusiast | Programmer | Tech Enthusiast</p>
-    </header>
-    <section></section>
+
+    <nav>
+        <li id="logo">Jenish Maharjan</li>
+        
+        <div class="hamburger" onclick="toggleNav()">
+            ☰
+        </div>
+
+        <ul class="nav-container" id="nav-links">
+            <li class="nav"><a href="#home" onclick="toggleNav()">Home</a></li>
+            <li class="nav"><a href="#projects" onclick="toggleNav()">Projects</a></li>
+            <li class="nav"><a href="#aboutme" onclick="toggleNav()">About Me</a></li>
+            <li class="nav"><a href="#contact" onclick="toggleNav()">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <header>
+            <b>Hello, This is Jenish Maharjan</b><br/>
+            <p>Web Developer | AI/ML Enthusiast | Programmer | Tech Enthusiast</p>
+        </header>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+    </section>
+    
+    <section id="aboutme">
+        <h2>About Me</h2>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: jenishmhrz123@gmail.com | <a href="https://www.linkedin.com/in/j-maharjan/" target="_blank">LinkedIn</a>  | <a href="https://github.com/legendofzer0" target="_blank">GitHub</a> </p>
+        <p>&copy; 2025 Jenish Maharjan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+
 </body>
 </html>
