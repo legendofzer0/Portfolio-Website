@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    z-index: 1;
+}
+
+#headerBackgrond{
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
@@ -62,12 +69,10 @@ footer p a {
 }
 
 @media (max-width: 768px) {
-    /* Show Hamburger Menu */
     .hamburger {
         display: block;
     }
 
-    /* Hide Nav Links Initially */
     .nav-container {
         display: none;
         flex-direction: column;
@@ -81,7 +86,6 @@ footer p a {
         border-radius: 5px;
     }
 
-    /* Show Menu When Active */
     .nav-container.active {
         display: flex;
     }
@@ -92,15 +96,29 @@ section {
     height: 100vh;
     display: flex;
     padding: 20px;
-    flex-direction: column; /* Ensures content inside is stacked vertically */
+    flex-direction: column;
 }
 
 #home {
-    background-image: url("Assets/andromeda-galaxy-way-ik.jpg");
-    background: #e0e0e0;
-    justify-content: center;
-    align-items: center;
+    width: 99vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+    background-image: url('/Assets/andromeda-galaxy-way-ik.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#headerBackgroundContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
+    z-index: 2;
+    background-color: hsl(260, 100%, 50%);
+    padding: 2px 10px;
 }
 
 #projects {
@@ -118,22 +136,22 @@ section {
 }
 
 #aboutme div {
-    margin-bottom: 20px; /* Adds space between the h2 and paragraph */
+    margin-bottom: 20px; 
 }
 
 #aboutme h2 {
-    display: block; /* Ensures the h2 is a block element */
+    display: block;
     margin-top: 0;
-    margin-bottom: 10px; /* Adds space below the h2 */
+    margin-bottom: 10px;
 }
 
 #aboutme .paragraph {
     text-align: justify;
     width: 80vw;
-    max-width: 900px; /* Limits the width to make it more readable */
-    margin: 0 auto; /* Centers it on the page */
-    margin-top: 0; /* Resets any default margin that might cause issues */
-    margin-bottom: 20px; /* Adjust as needed for spacing */
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -142,4 +160,33 @@ footer {
     text-align: center;
     padding: 5px;
     margin-top: auto;
+}
+
+.shooting-star {
+    position: absolute;
+    top: -10px;
+    width: 2px; 
+    height: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    opacity: 0.8;
+    animation: shootingStars 2s linear infinite;
+}
+
+.shooting-star:nth-child(odd) {
+    animation-duration: 1.5s;
+}
+
+.shooting-star:nth-child(even) {
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+}
+
+@keyframes shootingStars {
+    0% {
+        transform: translateX(-100%) translateY(0);
+    }
+    100% {
+        transform: translateX(100%) translateY(100vh);
+    }
 }

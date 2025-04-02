@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenish Maharjan Portfolio</title>
+    <link rel="icon" type="image/png" href="./Assets/drum-set.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,10 +26,13 @@
 
     <section id="home">
         <header>
-            <b>Hello, This is Jenish Maharjan</b><br/>
-            <p>Web Developer | AI/ML Enthusiast | Programmer | Tech Enthusiast</p>
+            <div id="headerBackgroundContainer">
+                <b>Hello, This is Jenish Maharjan</b><br/>
+                <p>Web Developer | AI/ML Enthusiast | Programmer | Tech Enthusiast</p>
+            </div>
         </header>
     </section>
+    
     
     <section id="projects">
         <h2>Projects</h2>
@@ -62,6 +66,22 @@
             const navLinks = document.getElementById("nav-links");
             navLinks.classList.toggle("active");
         }
+        function createShootingStars() {
+            const numberOfStars = 30; 
+            const container = document.getElementById('home');
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('shooting-star');
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDuration = `${Math.random() * 2 + 1}s`; 
+                star.style.animationDelay = `${Math.random() * 5}s`; 
+                container.appendChild(star);
+            }
+        }
+
+    document.addEventListener('DOMContentLoaded', createShootingStars);
+
     </script>
 
 </body>
