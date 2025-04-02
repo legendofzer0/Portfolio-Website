@@ -62,12 +62,10 @@ footer p a {
 }
 
 @media (max-width: 768px) {
-    /* Show Hamburger Menu */
     .hamburger {
         display: block;
     }
 
-    /* Hide Nav Links Initially */
     .nav-container {
         display: none;
         flex-direction: column;
@@ -81,7 +79,6 @@ footer p a {
         border-radius: 5px;
     }
 
-    /* Show Menu When Active */
     .nav-container.active {
         display: flex;
     }
@@ -92,8 +89,7 @@ section {
     height: 100vh;
     display: flex;
     padding: 20px;
-    flex-direction: column; /* Ensures content inside is stacked vertically */
-}
+    flex-direction: column; 
 
 #home {
     background-image: url("Assets/andromeda-galaxy-way-ik.jpg");
@@ -118,22 +114,22 @@ section {
 }
 
 #aboutme div {
-    margin-bottom: 20px; /* Adds space between the h2 and paragraph */
+    margin-bottom: 20px; 
 }
 
 #aboutme h2 {
-    display: block; /* Ensures the h2 is a block element */
+    display: block; 
     margin-top: 0;
-    margin-bottom: 10px; /* Adds space below the h2 */
+    margin-bottom: 10px;
 }
 
 #aboutme .paragraph {
     text-align: justify;
     width: 80vw;
-    max-width: 900px; /* Limits the width to make it more readable */
-    margin: 0 auto; /* Centers it on the page */
-    margin-top: 0; /* Resets any default margin that might cause issues */
-    margin-bottom: 20px; /* Adjust as needed for spacing */
+    max-width: 900px; 
+    margin: 0 auto;
+    margin-top: 0; 
+    margin-bottom: 20px; 
 }
 
 footer {
